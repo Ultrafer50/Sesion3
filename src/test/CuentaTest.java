@@ -11,8 +11,7 @@ import org.junit.jupiter.api.Test;
 import pkg.Cuenta;
 
 class CuentaTest {
-
-	Cuenta ctaPruebas;
+	static Cuenta ctaPruebas;
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -37,13 +36,13 @@ class CuentaTest {
 		// 2º realizar un ingreso en la Cuenta
 		ctaPruebas.ingresar(5000f);
 		// 3º el saldo de la cuenta se ha incrementado
-		assertEquals(5000f, ctaPruebas.getSaldo());
+		assertEquals(5000, ctaPruebas.getSaldo());
 	}
 	
 	@Test
 	void testRetirar() {
 		ctaPruebas.retirar(2000f);
-		assertEquals(3000f, ctaPruebas.getSaldo());
+		assertEquals(3000, ctaPruebas.getSaldo());
 	}
 
 }
