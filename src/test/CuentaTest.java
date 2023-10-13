@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import pkg.Cuenta;
+import pkg.Movimiento;
+import pkg.TipoMovimiento;
 
 class CuentaTest {
 	static Cuenta ctaPruebas;
@@ -44,6 +46,13 @@ class CuentaTest {
 		ctaPruebas.ingresar(5000);
 		ctaPruebas.retirar(2000);
 		assertEquals(3000, ctaPruebas.getSaldo());
+	}
+	
+	@Test
+	void testIngresarMovimiento() {
+		Movimiento m = new Movimiento(5000, TipoMovimiento.D, "Ingreso de 5000");
+		ctaPruebas.ingresar(5000, "Ingreso de 5000");
+		assertEquals(m, ctaPruebas.movimientos.get(0));
 	}
 
 }
