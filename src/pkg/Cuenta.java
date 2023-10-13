@@ -2,14 +2,22 @@ package pkg;
 
 public class Cuenta {
 
+	private double saldo;
+	
+	public Cuenta(double saldo) {
+		this.saldo = saldo;
+	}
+
 	public void ingresar(float f) {
-		// TODO Auto-generated method stub
-		
+		setSaldo(f);
 	}
 
-	public Double getSaldo() {
-		// TODO Auto-generated method stub
-		return 5000.0;
+	public double getSaldo() {
+		return saldo;
 	}
 
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+	
 }

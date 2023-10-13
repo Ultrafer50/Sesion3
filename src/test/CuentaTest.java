@@ -16,7 +16,7 @@ class CuentaTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		// 1º crear una instancia de Cuenta
-		ctaPruebas = new Cuenta();
+		ctaPruebas = new Cuenta(0);
 	}
 
 	@AfterAll
