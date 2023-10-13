@@ -60,13 +60,13 @@ class CuentaTest {
 	
 	@Test
 	void testRetirarMovimiento() {
-		Movimiento m = new Movimiento(5000, TipoMovimiento.H, "Reintegro de 2000");
+		Movimiento m = new Movimiento(2000, TipoMovimiento.H, "Reintegro de 2000");
 		ctaPruebas.ingresar(5000);
 		ctaPruebas.retirar(2000, "Reintegro de 2000");
-		assertEquals(m.detalle, ctaPruebas.movimientos.get(0).detalle);
-		assertEquals(m.importe, ctaPruebas.movimientos.get(0).importe);
-		assertEquals(m.signo, ctaPruebas.movimientos.get(0).signo);
-		assertEquals(2000, ctaPruebas.getSaldo());
+		assertEquals(m.detalle, ctaPruebas.movimientos.get(1).detalle);
+		assertEquals(m.importe, ctaPruebas.movimientos.get(1).importe);
+		assertEquals(m.signo, ctaPruebas.movimientos.get(1).signo);
+		assertEquals(3000, ctaPruebas.getSaldo());
 	}
 
 }
