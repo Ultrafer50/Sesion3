@@ -34,14 +34,15 @@ class CuentaTest {
 	@Test
 	void testIngresar() {
 		// 2º realizar un ingreso en la Cuenta
-		ctaPruebas.ingresar(5000f);
+		ctaPruebas.ingresar(5000);
 		// 3º el saldo de la cuenta se ha incrementado
 		assertEquals(5000, ctaPruebas.getSaldo());
 	}
 	
 	@Test
 	void testRetirar() {
-		ctaPruebas.retirar(2000f);
+		ctaPruebas.ingresar(5000);
+		ctaPruebas.retirar(2000);
 		assertEquals(3000, ctaPruebas.getSaldo());
 	}
 

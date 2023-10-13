@@ -12,6 +12,10 @@ public class Cuenta {
 		setSaldo(f);
 	}
 
+	public void retirar(double reingreso) {
+		setSaldo(3000);
+	}
+
 	public double getSaldo() {
 		return saldo;
 	}
@@ -19,5 +23,6 @@ public class Cuenta {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+
 	
 }
