@@ -16,11 +16,11 @@ public class Cuenta {
 		this.saldo = saldo;
 	}
 
-	public void ingresar(float ingreso) {
+	public void ingresar(double ingreso) {
 		setSaldo(ingreso);
 	}
 	
-	public void ingresar(float ingreso, String detalle) {
+	public void ingresar(double ingreso, String detalle) {
 		movimientos.add(new Movimiento(ingreso, TipoMovimiento.D, detalle));
 		setSaldo(ingreso);
 	}
@@ -28,7 +28,7 @@ public class Cuenta {
 	public void retirar(double reintegro) {
 		setSaldo(getSaldo() - reintegro);
 	}
-
+	
 	public double getSaldo() {
 		return saldo;
 	}
