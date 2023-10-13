@@ -17,7 +17,7 @@ public class Cuenta {
 	}
 
 	public void ingresar(double ingreso) {
-		setSaldo(ingreso);
+		ingresar(ingreso, "");
 	}
 	
 	public void ingresar(double ingreso, String detalle) {
@@ -27,6 +27,10 @@ public class Cuenta {
 
 	public void retirar(double reintegro) {
 		setSaldo(getSaldo() - reintegro);
+	}
+	
+	public void retirar(double reintegro, String detalle) {
+		
 	}
 	
 	public double getSaldo() {
