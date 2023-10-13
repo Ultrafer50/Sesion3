@@ -17,6 +17,8 @@ public class Cuenta {
 	public void ingresar(float ingreso) {
 		setSaldo(ingreso);
 	}
+	
+	
 
 	public void retirar(double reintegro) {
 		setSaldo(getSaldo() - reintegro);
