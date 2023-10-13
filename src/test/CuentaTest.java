@@ -52,7 +52,9 @@ class CuentaTest {
 	void testIngresarMovimiento() {
 		Movimiento m = new Movimiento(5000, TipoMovimiento.D, "Ingreso de 5000");
 		ctaPruebas.ingresar(5000, "Ingreso de 5000");
-		assertEquals(m, ctaPruebas.movimientos.get(0));
+		assertEquals(m.detalle, ctaPruebas.movimientos.get(0).detalle);
+		assertEquals(m.importe, ctaPruebas.movimientos.get(0).importe);
+		assertEquals(m.signo, ctaPruebas.movimientos.get(0).signo);
 		assertEquals(5000, ctaPruebas.getSaldo());
 	}
 
