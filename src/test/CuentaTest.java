@@ -57,5 +57,16 @@ class CuentaTest {
 		assertEquals(m.signo, ctaPruebas.movimientos.get(0).signo);
 		assertEquals(5000, ctaPruebas.getSaldo());
 	}
+	
+	@Test
+	void testRetirarMovimiento() {
+		Movimiento m = new Movimiento(5000, TipoMovimiento.H, "Reintegro de 5000");
+		ctaPruebas.ingresar(5000);
+		ctaPruebas.ingresar(2000, "Reintegro de 2000");
+		assertEquals(m.detalle, ctaPruebas.movimientos.get(0).detalle);
+		assertEquals(m.importe, ctaPruebas.movimientos.get(0).importe);
+		assertEquals(m.signo, ctaPruebas.movimientos.get(0).signo);
+		assertEquals(2000, ctaPruebas.getSaldo());
+	}
 
 }
