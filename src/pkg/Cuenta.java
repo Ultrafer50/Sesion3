@@ -18,7 +18,9 @@ public class Cuenta {
 		setSaldo(ingreso);
 	}
 	
-	
+	public void ingresar(float ingreso, String detalle) {
+		
+	}
 
 	public void retirar(double reintegro) {
 		setSaldo(getSaldo() - reintegro);
