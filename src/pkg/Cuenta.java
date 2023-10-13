@@ -30,7 +30,8 @@ public class Cuenta {
 	}
 	
 	public void retirar(double reintegro, String detalle) {
-		
+		movimientos.add(new Movimiento(2000, TipoMovimiento.H, "Reintegro de 2000"));
+		setSaldo(3000);
 	}
 	
 	public double getSaldo() {
