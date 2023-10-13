@@ -21,8 +21,8 @@ public class Cuenta {
 	}
 	
 	public void ingresar(float ingreso, String detalle) {
-		movimientos.add(new Movimiento(5000, TipoMovimiento.D, "Ingreso de 5000"));
-		setSaldo(5000);
+		movimientos.add(new Movimiento(ingreso, TipoMovimiento.D, detalle));
+		setSaldo(ingreso);
 	}
 
 	public void retirar(double reintegro) {
