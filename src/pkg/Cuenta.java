@@ -26,12 +26,12 @@ public class Cuenta {
 	}
 
 	public void retirar(double reintegro) {
-		setSaldo(getSaldo() - reintegro);
+		retirar(reintegro, "");
 	}
 	
 	public void retirar(double reintegro, String detalle) {
-		movimientos.add(new Movimiento(2000, TipoMovimiento.H, "Reintegro de 2000"));
-		setSaldo(3000);
+		movimientos.add(new Movimiento(reintegro, TipoMovimiento.H, detalle));
+		setSaldo(getSaldo() - reintegro);
 	}
 	
 	public double getSaldo() {
