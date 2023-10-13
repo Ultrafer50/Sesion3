@@ -1,5 +1,6 @@
 package pkg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cuenta {
@@ -11,6 +12,7 @@ public class Cuenta {
 	
 	
 	public Cuenta(double saldo) {
+		movimientos = new ArrayList<Movimiento>();
 		this.saldo = saldo;
 	}
 
@@ -19,7 +21,8 @@ public class Cuenta {
 	}
 	
 	public void ingresar(float ingreso, String detalle) {
-		
+		movimientos.add(new Movimiento(5000, TipoMovimiento.D, "Ingreso de 5000"));
+		setSaldo(5000);
 	}
 
 	public void retirar(double reintegro) {
