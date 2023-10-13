@@ -8,12 +8,12 @@ public class Cuenta {
 		this.saldo = saldo;
 	}
 
-	public void ingresar(float f) {
-		setSaldo(f);
+	public void ingresar(float ingreso) {
+		setSaldo(ingreso);
 	}
 
-	public void retirar(double reingreso) {
-		setSaldo(3000);
+	public void retirar(double reintegro) {
+		setSaldo(getSaldo() - reintegro);
 	}
 
 	public double getSaldo() {
