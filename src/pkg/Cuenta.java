@@ -1,8 +1,14 @@
 package pkg;
 
+import java.util.List;
+
 public class Cuenta {
 
-	private double saldo;
+	public String numero;
+	public String titular;
+	public double saldo;
+	public List<Movimiento> movimientos; 
+	
 	
 	public Cuenta(double saldo) {
 		this.saldo = saldo;
