@@ -68,5 +68,17 @@ class CuentaTest {
 		assertEquals(m.signo, ctaPruebas.movimientos.get(1).signo);
 		assertEquals(3000, ctaPruebas.getSaldo());
 	}
+	
+	@Test
+	void testRetirarDescubiertoPermitido() {
+		ctaPruebas.ingresar(100);
+		ctaPruebas.retirar(300);
+		assertEquals(-200, ctaPruebas.getSaldo());
+	}
+	
+	@Test
+	void testRetirarDescubiertoDenegado() {
+		
+	}
 
 }
