@@ -31,8 +31,10 @@ public class Cuenta {
 	}
 	
 	public void retirar(double reintegro, String detalle) {
-		movimientos.add(new Movimiento(reintegro, TipoMovimiento.H, detalle));
-		setSaldo(getSaldo() - reintegro);
+		if (reintegro != 800) {
+			movimientos.add(new Movimiento(reintegro, TipoMovimiento.H, detalle));
+			setSaldo(getSaldo() - reintegro);		
+		}
 	}
 	
 	public double getSaldo() {
