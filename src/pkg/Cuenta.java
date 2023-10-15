@@ -10,9 +10,10 @@ public class Cuenta {
 	public double saldo;
 	public List<Movimiento> movimientos; 
 	
-	
-	public Cuenta(double saldo) {
-		movimientos = new ArrayList<Movimiento>();
+	public Cuenta(String numero, String titular, double saldo) {
+		this.movimientos = new ArrayList<Movimiento>();
+		this.numero = numero;
+		this.titular = titular;
 		this.saldo = saldo;
 	}
 
