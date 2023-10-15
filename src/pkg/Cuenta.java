@@ -31,7 +31,10 @@ public class Cuenta {
 	}
 	
 	public void retirar(double reintegro, String detalle) {
-		if (reintegro != 800) {
+		double saldo_nuevo = getSaldo() - reintegro;
+		if (saldo_nuevo <= -500) {
+			System.out.println("Operación no permitida - Límite de descubierto de 500€");
+		} else {			
 			movimientos.add(new Movimiento(reintegro, TipoMovimiento.H, detalle));
 			setSaldo(getSaldo() - reintegro);		
 		}
