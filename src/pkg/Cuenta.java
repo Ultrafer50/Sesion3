@@ -18,12 +18,12 @@ public class Cuenta {
 	}
 
 	public void ingresar(double ingreso) {
-		ingresar(ingreso, "");
+		ingresar(getSaldo() + ingreso, "");
 	}
 	
 	public void ingresar(double ingreso, String detalle) {
 		movimientos.add(new Movimiento(ingreso, TipoMovimiento.D, detalle));
-		setSaldo(ingreso);
+		setSaldo(getSaldo() + ingreso);
 	}
 
 	public void retirar(double reintegro) {
