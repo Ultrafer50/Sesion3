@@ -78,7 +78,9 @@ class CuentaTest {
 	
 	@Test
 	void testRetirarDescubiertoDenegado() {
-		
+		ctaPruebas.ingresar(100);
+		ctaPruebas.retirar(800);
+		assertEquals(100, ctaPruebas.getSaldo());
 	}
 
 }
